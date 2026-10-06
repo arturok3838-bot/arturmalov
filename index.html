@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Артур Малов — сайты на заказ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Caveat:wght@600&family=IBM+Plex+Mono:wght@400;500&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efe6d2;--ink:#1b1a17;--mute:#6a6454;--blue:#2340ff;--hl:#ffd23f;--rc:#fffdf5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--ink:#f0e9d8;--mute:#a39c88;--blue:#7d8fff;--hl:#b8860b;--rc:#24211a}}
+:root[data-theme="dark"]{--bg:#17150f;--ink:#f0e9d8;--mute:#a39c88;--blue:#7d8fff;--hl:#b8860b;--rc:#24211a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.6 Onest,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body::before{opacity:.12;mix-blend-mode:screen}}
+a{color:inherit}
+.w{max-width:980px;margin:0 auto;padding:0 22px;position:relative}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font:500 14px 'IBM Plex Mono',monospace}
+header a{text-decoration:none;border-bottom:2px solid var(--ink)}
+header a:hover{border-color:var(--blue);color:var(--blue)}
+.hero{padding:40px 0 90px;position:relative}
+h1{font:800 clamp(30px,7.4vw,70px)/1.08 Unbounded,sans-serif;letter-spacing:-.04em}
+mark{background:linear-gradient(transparent 58%,var(--hl) 58% 92%,transparent 92%);color:inherit;padding:0 .1em;margin:0 -.1em}
+.u{position:relative;display:inline-block}
+.u svg{position:absolute;left:-2%;bottom:-.22em;width:104%;height:.3em;overflow:visible}
+.u path{fill:none;stroke:var(--blue);stroke-width:5;stroke-linecap:round}
+.lead{max-width:470px;margin:30px 0 32px;color:var(--mute)}
+.note{font:600 26px Caveat,cursive;color:var(--blue);transform:rotate(-3deg);display:inline-block;margin-left:6px}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:16px 26px;text-decoration:none;font:500 15px 'IBM Plex Mono',monospace;border-radius:4px 14px 4px 14px;box-shadow:5px 5px 0 var(--blue);transition:.15s}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--blue)}
+.stamp{position:absolute;right:0;top:-10px;width:118px;height:118px;border-radius:50%;background:var(--hl);color:#1b1a17;display:grid;place-items:center;text-align:center;font:800 13px/1.15 Unbounded,sans-serif;text-transform:uppercase;transform:rotate(12deg);transition:.4s;border:2px dashed #1b1a17;outline:6px solid var(--hl)}
+.stamp:hover{transform:rotate(-6deg) scale(1.06)}
+h2{font:800 clamp(24px,4.4vw,38px)/1.1 Unbounded,sans-serif;letter-spacing:-.04em;margin-bottom:28px}
+section{padding:56px 0}
+.honest{display:grid;gap:18px;max-width:640px;font-size:21px;line-height:1.5}
+.honest p+p{font-size:18px;color:var(--mute)}
+.honest b{font-weight:500;border-bottom:2px solid var(--blue)}
+.receipt{background:var(--rc);max-width:430px;padding:30px 26px 22px;font:400 15px/1.5 'IBM Plex Mono',monospace;transform:rotate(-1.4deg);box-shadow:0 14px 30px -12px rgba(0,0,0,.35);position:relative;margin-bottom:46px}
+.receipt::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:linear-gradient(-45deg,transparent 8px,var(--rc) 0),linear-gradient(45deg,transparent 8px,var(--rc) 0);background-size:16px 16px}
+.receipt h3{font:500 15px 'IBM Plex Mono',monospace;text-align:center;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+.it{padding:12px 0;border-top:1.5px dashed var(--mute)}
+.it div{display:flex;justify-content:space-between;gap:10px;font-weight:500}
+.it small{display:block;color:var(--mute);font-size:13px;margin-top:2px}
+.tot{border-top:1.5px dashed var(--mute);padding-top:12px;font-size:13px;color:var(--mute);text-align:center}
+.steps{list-style:none;padding:0;display:grid;gap:30px;max-width:640px}
+.steps li{display:grid;grid-template-columns:62px 1fr;align-items:start}
+.steps li::before{content:attr(data-n);font:600 64px/.8 Caveat,cursive;color:var(--blue);transform:rotate(-6deg)}
+.steps b{font:600 17px Unbounded,sans-serif;letter-spacing:-.03em;display:block}
+.steps span{color:var(--mute)}
+.contact{padding:70px 0 30px}
+.contact a.big{display:inline-block;font:800 clamp(26px,6.4vw,64px)/1.1 Unbounded,sans-serif;letter-spacing:-.05em;text-decoration:none;word-break:break-word;margin:14px 0 26px;background:linear-gradient(var(--hl),var(--hl)) 0 100%/100% .3em no-repeat;transition:.2s}
+.contact a.big:hover{background-size:100% 100%}
+.links{display:flex;gap:22px;flex-wrap:wrap;font:500 15px 'IBM Plex Mono',monospace}
+footer{padding:28px 0;font:400 13px 'IBM Plex Mono',monospace;color:var(--mute)}
+
+.wins{display:grid;gap:34px;justify-items:center}
+.wf{width:100%;max-width:300px;transition:.3s}
+.wf:nth-child(1){transform:rotate(-2.5deg)}.wf:nth-child(2){transform:rotate(1.8deg)}.wf:nth-child(3){transform:rotate(-1deg)}
+.wf:hover{transform:rotate(0) translateY(-6px)}
+.win{background:var(--rc);border:2px solid var(--ink);border-radius:8px;box-shadow:6px 6px 0 var(--ink);overflow:hidden}
+.bar{display:flex;align-items:center;gap:5px;padding:7px 9px;border-bottom:2px solid var(--ink);background:var(--bg)}
+.bar i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--ink)}
+.bar i:first-child{background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.bar span{margin-left:8px;flex:1;height:14px;border-radius:7px;border:1.5px solid var(--ink);font:400 9px/11px 'IBM Plex Mono',monospace;padding:0 7px;color:var(--mute);overflow:hidden;white-space:nowrap}
+.pg{height:150px;padding:12px;display:flex;flex-direction:column;gap:7px}
+.pg b{display:block;height:7px;border-radius:4px;background:var(--ink);opacity:.85}
+.pg u{display:block;height:5px;border-radius:3px;background:var(--mute);opacity:.45;text-decoration:none}
+.nv{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.nv em{width:26px;height:8px;background:var(--ink);border-radius:2px}.nv s{width:50px;height:5px;background:var(--mute);opacity:.5;border-radius:3px;text-decoration:none}
+.hb{flex:1;border-radius:6px;background:var(--blue);padding:10px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.hb b{background:#fff;width:75%;opacity:1}.hb u{background:#fff;width:50%;opacity:.7}
+.hb em{width:44px;height:14px;border-radius:7px;background:var(--hl);margin-top:3px}
+.ab{display:flex;gap:10px;align-items:center;flex:1}
+.ab i{width:54px;height:54px;border-radius:50%;background:var(--hl);border:2px solid var(--ink);flex:none}
+.ab div{flex:1;display:flex;flex-direction:column;gap:6px}
+.gr{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1}
+.gr div{border-radius:5px;border:1.5px solid var(--ink);padding:5px;display:flex;flex-direction:column;justify-content:flex-end;gap:3px}
+.gr div:nth-child(1){background:var(--hl)}.gr div:nth-child(2){background:var(--blue)}.gr div:nth-child(3){background:var(--blue)}.gr div:nth-child(4){background:var(--hl)}
+.gr b{height:5px;width:60%;background:var(--ink)}.gr u{width:35%;background:var(--ink);opacity:.6}
+.wc{text-align:center;font:600 24px Caveat,cursive;color:var(--blue);margin-top:16px}
+.cap{font:400 14px 'IBM Plex Mono',monospace;color:var(--mute);margin-top:34px;text-align:center}
+@media(min-width:800px){.wins{grid-template-columns:repeat(3,1fr);align-items:start}.wf:nth-child(2){margin-top:34px}}
+@media(min-width:800px){
+.w{padding:0 40px}.stamp{width:150px;height:150px;font-size:16px;top:20px}
+.hero{padding:70px 0 110px}
+.honest{margin-left:12%}
+.steps{margin-left:24%}.steps li:nth-child(even){margin-left:60px}
+.receipt{margin-left:auto;margin-right:6%}
+.contact{text-align:right}.links{justify-content:flex-end}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="w">
+<header><span>Артур Малов</span><a href="#kontakt">написать мне</a></header>
+
+<div class="hero">
+<div class="stamp">беру<br>заказы</div>
+<h1>Сделаю сайт, на который <mark>не стыдно</mark> отправить <span class="u">клиента<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3 8 C40 2 70 11 105 6 S170 3 197 7"/></svg></span></h1>
+<p class="lead">Сайты на заказ для небольшого бизнеса и частных специалистов. Каждый рисую с чистого листа, без шаблонов и конструкторов.</p>
+<a class="btn" href="#kontakt">Обсудить проект →</a><span class="note">отвечаю в тот же день</span>
+</div>
+
+<section>
+<h2>Чем занимаюсь</h2>
+<div class="wins">
+<div class="wf"><div class="win"><div class="bar"><i></i><i></i><i></i><span>vash-sait.ru</span></div><div class="pg"><div class="nv"><em></em><s></s></div><div class="hb"><b></b><u></u><em></em></div></div></div><p class="wc">лендинг</p></div>
+<div class="wf"><div class="win"><div class="bar"><i></i><i></i><i></i><span>vash-sait.ru/o-mne</span></div><div class="pg"><div class="nv"><em></em><s></s></div><div class="ab"><i></i><div><b></b><u></u><u></u></div></div><u></u><u style="width:70%"></u></div></div><p class="wc">сайт-визитка</p></div>
+<div class="wf"><div class="win"><div class="bar"><i></i><i></i><i></i><span>vash-sait.ru/shop</span></div><div class="pg"><div class="nv"><em></em><s></s></div><div class="gr"><div><b></b><u></u></div><div><b></b><u></u></div><div><b></b><u></u></div><div><b></b><u></u></div></div></div></div><p class="wc">магазин</p></div>
+</div>
+<p class="cap">это наброски, не реальные проекты. Так будут устроены ваши страницы</p>
+</section>
+
+<section>
+<h2>Честно про себя</h2>
+<div class="honest">
+<p>Портфолио у меня пока пустое, и я не буду выдумывать кейсы. <b>Ваш сайт станет одним из первых в нём.</b></p>
+<p>Поэтому первые проекты делаю по сниженной цене и вкладываюсь в каждый как в свой. Вы получите внимание, которого нет у студий, где вашим заказом занимается стажёр.</p>
+</div>
+</section>
+
+<section>
+<h2>Сколько стоит</h2>
+<div class="receipt">
+<h3>Прайс</h3>
+<div class="it"><div><span>Лендинг</span><span>от 10 000 ₽</span></div><small>одна страница, одна цель: заявка</small></div>
+<div class="it"><div><span>Сайт-визитка</span><span>от 25 000 ₽</span></div><small>услуги, о вас, контакты</small></div>
+<div class="it"><div><span>Каталог / заказы</span><span>от 65 000 ₽</span></div><small>корзина или запись, админка</small></div>
+<div class="tot">точную цену называю до начала работы</div>
+</div>
+</section>
+
+<section>
+<h2>Как это будет</h2>
+<ol class="steps">
+<li data-n="1"><div><b>Поговорим</b><span>Расскажете про бизнес и кому нужен сайт. Бесплатно.</span></div></li>
+<li data-n="2"><div><b>Нарисую</b><span>Покажу макет. Правим, пока не скажете «да, это оно».</span></div></li>
+<li data-n="3"><div><b>Сверстаю</b><span>Формы, быстрая загрузка, удобно с телефона.</span></div></li>
+<li data-n="4"><div><b>Запущу</b><span>Выложу в интернет и покажу, как всё менять самому.</span></div></li>
+</ol>
+</section>
+
+<div class="contact" id="kontakt">
+<h2>Есть задача?</h2>
+<a class="big" href="mailto:arturok3838@gmail.com">arturok3838@gmail.com</a>
+<div class="links"><a href="https://t.me/TheCodingVibe">@TheCodingVibe</a></div>
+</div>
+<footer>© 2026 Артур Малов.</footer>
+</div>
+</body>
+</html>
